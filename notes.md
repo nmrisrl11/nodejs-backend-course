@@ -12,3 +12,5 @@ To update only the Prisma Client without changing the database
     - You pulled a repo
     - The database already matches the schema
     - Client is missing
+
+JWT Token - JSON Web Token

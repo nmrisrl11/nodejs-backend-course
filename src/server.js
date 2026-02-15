@@ -1,14 +1,18 @@
 import { config } from "dotenv";
 import express from "express";
-import movieRoutes from "./routes/movieRoutes.js";
 import { connectDB, discconnectDB } from "./config/db.js";
+
+import authRoutes from "./routes/authRoutes.js";
+import movieRoutes from "./routes/movieRoutes.js";
 
 config();
 connectDB();
 
 const app = express();
 
+app.use(express.json());
 app.use("/movies", movieRoutes);
+app.use("/auth", authRoutes);
 
 const PORT = 5001;
 
