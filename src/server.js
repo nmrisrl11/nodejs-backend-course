@@ -4,6 +4,7 @@ import { connectDB, discconnectDB } from "./config/db.js";
 
 import authRoutes from "./routes/authRoutes.js";
 import movieRoutes from "./routes/movieRoutes.js";
+import watchlistRoutes from "./routes/watchlistRoutes.js";
 
 config();
 connectDB();
@@ -13,6 +14,7 @@ const app = express();
 app.use(express.json());
 app.use("/movies", movieRoutes);
 app.use("/auth", authRoutes);
+app.use("/watchlist", watchlistRoutes);
 
 const PORT = 5001;
 

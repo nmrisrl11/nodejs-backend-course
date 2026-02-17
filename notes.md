@@ -14,3 +14,10 @@ To update only the Prisma Client without changing the database
     - Client is missing
 
 JWT Token - JSON Web Token
+
+Middleware
+- Apply middleware to all routes
+Example: `router.use(authMiddleware);`
+
+- Apply middleware to specific route
+Example: `router.post("/", authMiddleware, addToWatchlist)`
